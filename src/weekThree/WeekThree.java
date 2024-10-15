@@ -8,8 +8,8 @@ public class WeekThree {
         else System.out.println("Hello");
     }
     public void input(String selection) {
-        String string = "";
-        int integer = 0;
+        String string;
+        int integer;
         Scanner sc = new Scanner(System.in);
         System.out.println();
         if (selection.equals("String")) {
