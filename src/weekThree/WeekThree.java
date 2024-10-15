@@ -34,27 +34,13 @@ public class WeekThree {
         else System.out.println("False");
     }
 
-    public void isStringPalindrome() {
-        String word = inputString("Please enter the word:\n");
-        String newString = "";
-        for (int i = word.length()-1; i >= 0; i--) {
-            newString = newString + (word.charAt(i));
-        }
-        if (newString.equals(word)) System.out.println("This word is a Palindrome!");
-        else System.out.println("This word is not a Palindrome!");
+    public void isPalindrome() {
+        String word = inputString("Please enter the Sequence:\n");
+        StringBuilder newString = new StringBuilder();
+
+        for (int i = word.length() - 1; i >= 0; i--) newString.append(word.charAt(i));
+
+        if (newString.toString().equals(word)) System.out.println("This sequence is a Palindrome!");
+        else System.out.println("This sequence is not a Palindrome!");
     }
-//This function is no longer needed.
-//    public void input(String selection) {
-//        String string;
-//        int integer;
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println();
-//        if (selection.equals("String")) {
-//            string = sc.nextLine();
-//            System.out.println(string);
-//        } else if (selection.equals("Integer")) {
-//            integer = sc.nextInt();
-//            System.out.println(integer);
-//        }
-//    }
 }

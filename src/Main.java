@@ -5,6 +5,6 @@ public class Main {
         weekThree.greet(args);
         weekThree.exerciseFive();
         weekThree.increasingOrder();
-        weekThree.isStringPalindrome();
+        weekThree.isPalindrome();
     }
 }
