@@ -4,5 +4,7 @@ public class Main {
         WeekThree weekThree = new WeekThree();
         weekThree.greet(args);
         weekThree.exerciseFive();
+        weekThree.increasingOrder();
+        weekThree.isStringPalindrome();
     }
 }
