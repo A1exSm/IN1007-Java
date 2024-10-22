@@ -41,7 +41,7 @@ public class WeekFour {
             }
         }
     }
-    public void exerciseOne() {
+    private void exerciseOne() {
         // display "greater" if the first integer is greater than the second  and "smaller or equal" otherwise.
         int one  = weekThree.inputInt("Please enter integer One: ");
         int two  = weekThree.inputInt("Please enter integer Two: ");
@@ -51,7 +51,7 @@ public class WeekFour {
             System.out.println("smaller or equal");
         }
     }
-    public void exerciseTwo() {
+    private void exerciseTwo() {
         // Displays the sum of 1 + 2... + n, where n = input int
         int positiveInt;
         while (true) {
@@ -69,7 +69,7 @@ public class WeekFour {
         System.out.println(sum);
     }
 
-    public void exerciseThree() {
+    private void exerciseThree() {
         // Write a program which asks the user to enter an integer until this integer is negative.
         int integer = 0;
         while (integer >= 0) {
@@ -77,7 +77,7 @@ public class WeekFour {
         }
     }
 
-    public void exerciseFour() {
+    private void exerciseFour() {
         // enter a month and displays the corresponding number month.
         String[] Month  = {
                 "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
@@ -91,7 +91,7 @@ public class WeekFour {
             }
         }
     }
-    public int[] arrayInput() {
+    private int[] arrayInput() {
         int n = weekThree.inputInt("Please enter an integer: ");
         int[] inputs = new int[n];
         for (int i = 0; i < n; i++) {
@@ -100,7 +100,7 @@ public class WeekFour {
         return inputs;
     }
 
-    public void exerciseSix() {
+    private void exerciseSix() {
         // enter integer n and enter n additional int values then display the sum n1 - n2 + n3 - n4 +…
         int sum = 0;
         int[] inputs = arrayInput();
@@ -114,7 +114,7 @@ public class WeekFour {
         System.out.println(sum);
     }
 
-    public void exerciseSeven() {
+    private void exerciseSeven() {
         // enter an integer n and then asks the user to enter n additional integers, and displays these integers in reverse order.
         int[] firstArray = arrayInput();
         int[] revArray = new int[firstArray.length];
@@ -124,7 +124,7 @@ public class WeekFour {
         System.out.println(Arrays.toString(firstArray));
         System.out.println(Arrays.toString(revArray));
     }
-    public void exerciseEight() {
+    private void exerciseEight() {
         // Write a program which asks the user to enter an integer n and draw the triangle with 2n-1 stars at its base (here illustrated with n=5):
         int base = (2*(weekThree.inputInt("Please enter an integer: ")))-1;
         int temp = 1;
@@ -144,7 +144,7 @@ public class WeekFour {
         }
     }
 
-    public void exerciseNine(){
+    private void exerciseNine(){
         int positiveInt = weekThree.inputInt("Please enter a positive integer: ");
         while (positiveInt != 1) {
             if (positiveInt % 2 == 0) { //even
@@ -156,35 +156,35 @@ public class WeekFour {
         }
     }
 
-    public void exerciseTen() {
+    private void exerciseTen() {
         // Enter two String and displays one of the longest common sequence of the two String
-        // The longest common sequence of "youlovejava" and "ilovechocolate" is "love".
         String stringOne = weekThree.inputString("Please enter a string: ").toLowerCase();
         String stringTwo = weekThree.inputString("Please enter a string: ").toLowerCase();
-        String commonWord = "";
-        String tempWord = "";
-        boolean endWord = true;
-        for (int i = 0; i <= stringOne.length()-1;i++) {
-            for (int y = 0; y <= stringTwo.length()-1;y++) {
-                if (stringOne.charAt(i) == stringTwo.charAt(y)) {
-                    if (!endWord) {
-                        tempWord = tempWord + stringOne.charAt(i);
-                    } else {
-                        tempWord = String.valueOf(stringOne.charAt(i));
+        String longestCommonSequence = "";
+        StringBuilder tempString = new StringBuilder();
+        for (int outerWord = 0; outerWord < stringOne.length(); outerWord++) {
+            for (int innerWord = 0; innerWord < stringTwo.length(); innerWord++) {
+                if (stringOne.charAt(outerWord) == stringTwo.charAt(innerWord)) {
+                    tempString.append(stringOne.charAt(outerWord));
+                    int y = outerWord + 1;
+                    for (int i = innerWord + 1; i < stringTwo.length() && y < stringOne.length();i++, y++) {
+                        if (stringOne.charAt(y) == stringTwo.charAt(i)) {
+                            tempString.append(stringOne.charAt(y));
+                        } else {
+                            break;
+                        }
                     }
-                } else {
-                    endWord = true;
-                    if (tempWord.length() > commonWord.length()) {
-                        commonWord = tempWord;
-                    }
-                    tempWord = "";
                 }
+                if (tempString.length() > longestCommonSequence.length()) {
+                    longestCommonSequence = tempString.toString();
+                }
+                tempString.setLength(0);
             }
-            System.out.println(commonWord);
         }
-        if (tempWord.length() > commonWord.length()) {
-            commonWord = tempWord;
+        if (!longestCommonSequence.isEmpty()) {
+            System.out.println(longestCommonSequence);
+        } else {
+            System.out.println("No common sequence found.");
         }
-        System.out.println(commonWord);
     }
 }

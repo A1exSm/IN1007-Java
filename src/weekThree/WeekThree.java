@@ -2,7 +2,6 @@ package weekThree;
 import java.util.Scanner;
 
 public class WeekThree {
-
     public void run(String[] args) {
         if (inputString("would you like to run weekThree methods (y/n)? ").equals("y")) {
             switch (inputInt("Which weekThree function would you like to run? ")) {
@@ -23,13 +22,7 @@ public class WeekThree {
             }
         }
     }
-
-    public void exerciseZero(String[] arguments) {
-        //Checks whether any arguments have been provided, and gives an appropriate greeting.
-        if (arguments.length > 0) System.out.println("Hello " + arguments[0]);
-        else System.out.println("Hello");
-    }
-
+// Next couple methods are public since I will be using them across my files.
     public String inputString(String statement) {
         Scanner sc = new Scanner(System.in);
         System.out.println(statement);
@@ -42,13 +35,20 @@ public class WeekThree {
         return sc.nextInt();
     }
 
-    public void exerciseFive() {
+    private void exerciseZero(String[] arguments) {
+        //Checks whether any arguments have been provided, and gives an appropriate greeting.
+        if (arguments.length > 0) System.out.println("Hello " + arguments[0]);
+        else System.out.println("Hello");
+    }
+
+
+    private void exerciseFive() {
         String name_of_the_TA = inputString("Please enter the name of a TA:\n");
         String name_of_the_student = inputString("Please enter your name:\n");
         System.out.println("Dear " + name_of_the_TA + ",\nI enjoy your tutorials, they are awesome!\n" + name_of_the_student + ".");
     }
 
-    public void exerciseSix() {
+    private void exerciseSix() {
         int num1 = inputInt("Please enter the first number:\n");
         int num2 = inputInt("Please enter the second number:\n");
         int num3 = inputInt("Please enter the third number:\n");
@@ -56,7 +56,7 @@ public class WeekThree {
         else System.out.println("False");
     }
 
-    public void exerciseSeven() {
+    private void exerciseSeven() {
         String word = inputString("Please enter the Sequence:\n");
         StringBuilder newString = new StringBuilder();
 
