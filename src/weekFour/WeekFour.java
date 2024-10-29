@@ -130,7 +130,6 @@ public class WeekFour {
         int temp = 1;
         int buffer;
         while (temp <= base) {
-            System.out.println();
             buffer = ((base - temp)/2)-1;
             if (temp != base) {
                 for (int i = 0; i <= buffer; i++) {
@@ -141,6 +140,7 @@ public class WeekFour {
                 System.out.print("*");
             }
             temp +=2;
+            System.out.println();
         }
     }
 
