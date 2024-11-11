@@ -9,35 +9,15 @@ public class WeekFour {
     public void run() {
         if (weekThree.inputString("would you like to run weekFour methods (y/n)? ").equals("y")) {
             switch (weekThree.inputInt("Which weekFour function would you like to run? ")) {
-                case 1:
-                    exerciseOne();
-                    break;
-                case 2:
-                    exerciseTwo();
-                    break;
-                case 3:
-                    exerciseThree();
-                    break;
-                case 4:
-                    exerciseFour();
-                    break;
-                case 6:
-                    exerciseSix();
-                    break;
-                case 7:
-                    exerciseSeven();
-                    break;
-                case 8:
-                    exerciseEight();
-                    break;
-                case 9:
-                    exerciseNine();
-                    break;
-                case 10:
-                    exerciseTen();
-                    break;
-                default:
-                    System.out.println("Invalid input");
+                case 1 -> exerciseOne();
+                case 2 -> exerciseTwo();
+                case 3 -> exerciseThree();
+                case 4 -> exerciseFour();
+                case 7 -> exerciseSeven();
+                case 8 -> exerciseEight();
+                case 9 -> exerciseNine();
+                case 10 -> exerciseTen();
+                default -> System.out.println("Invalid input");
             }
         }
     }

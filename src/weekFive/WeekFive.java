@@ -5,34 +5,17 @@ import java.lang.Math;
 public class WeekFive {
     WeekThree weekThree = new WeekThree();
     public void run() {
-        if (weekThree.inputString("would you like to run Five methods (y/n)? ").equals("y")) {
-            switch (weekThree.inputInt("Which weekFour function would you like to run? ")) {
-                case 1:
-                    exerciseOne();
-                    break;
-                case 2:
-                    exerciseTwo();
-                    break;
-                case 3:
-                    exerciseThree();
-                    break;
-                case 4:
-                    exerciseFour();
-                    break;
-                case 5:
-                    exerciseFive();
-                    break;
-                case 6:
-                    exerciseSix();
-                    break;
-                case 7:
-                    exerciseSeven();
-                    break;
-                case 8:
-                    exerciseEight();
-                    break;
-                default:
-                    System.out.println("Invalid input");
+        if (weekThree.inputString("would you like to run weekFive methods (y/n)? ").equals("y")) {
+            switch (weekThree.inputInt("Which weekFive function would you like to run? ")) {
+                case 1 -> exerciseOne();
+                case 2 -> exerciseTwo();
+                case 3 -> exerciseThree();
+                case 4 -> exerciseFour();
+                case 5 -> exerciseFive();
+                case 6 -> exerciseSix();
+                case 7 -> exerciseSeven();
+                case 8 -> exerciseEight();
+                default -> System.out.println("Invalid input");
             }
         }
     }

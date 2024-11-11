@@ -5,20 +5,11 @@ public class WeekThree {
     public void run(String[] args) {
         if (inputString("would you like to run weekThree methods (y/n)? ").equals("y")) {
             switch (inputInt("Which weekThree function would you like to run? ")) {
-                case 0:
-                    exerciseZero(args);
-                    break;
-                case 5:
-                    exerciseFive();
-                    break;
-                case 6:
-                    exerciseSix();
-                    break;
-                case 7:
-                    exerciseSeven();
-                    break;
-                default:
-                    System.out.println("Invalid input");
+                case 0 -> exerciseZero(args);
+                case 5 -> exerciseFive();
+                case 6 -> exerciseSix();
+                case 7 -> exerciseSeven();
+                default -> System.out.println("Invalid input");
             }
         }
     }
