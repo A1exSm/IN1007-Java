@@ -7,7 +7,7 @@ public class Main {
         WeekThree weekThree = new WeekThree();
         WeekFour weekFour = new WeekFour();
         WeekFive weekFive = new WeekFive();
-        weekSeven.WeekSeven weekSeven = new WeekSeven();
+        WeekSeven weekSeven = new WeekSeven();
         // run methods
         weekThree.run(args);
         weekFour.run();
