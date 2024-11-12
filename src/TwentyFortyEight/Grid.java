@@ -13,10 +13,6 @@ public class Grid {
             }
         }
         grid[0][0] = 2;
-
-        for (int[] row : grid) {
-            System.out.println(Arrays.toString(row));
-        }
     }
 
     public Line getRow(int rowNumber) {
@@ -50,4 +46,5 @@ public class Grid {
         }
         return column;
     }
+
 }
