@@ -1,6 +1,6 @@
 package TwentyFortyEight;
 import java.util.Arrays;
-import weekThree.WeekThree;
+
 public class Line {
     int[] line;
 

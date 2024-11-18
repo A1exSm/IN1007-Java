@@ -1,15 +1,13 @@
 package weekSeven;
 import weekThree.WeekThree;
 
-import javax.swing.*;
-import java.util.Arrays;
 import java.lang.Math;
 public class WeekSeven {
     WeekThree weekThree = new WeekThree();
 
     public void run() {
         if (weekThree.inputString("would you like to run weekSeven methods (y/n)? ").equals("y")) {
-            switch (weekThree.inputInt("Which weekSeven function would you like to run? ")) {
+            switch (weekThree.inputInt("Which function would you like to run? ")) {
                 case 1 -> exerciseOne();
                 case 2 -> exerciseTwo();
                 case 3 -> exerciseThree();

@@ -1,4 +1,5 @@
 package weekThree;
+
 import java.util.Scanner;
 
 public class WeekThree {

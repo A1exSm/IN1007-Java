@@ -7,6 +7,12 @@ import java.util.Arrays;
 public class TwentyFortyEight {
     WeekThree weekThree = new WeekThree();
     public void run() {
+        if (weekThree.inputString("Would you like to play 2048 (y/n):\n").equalsIgnoreCase("y")) {
+            game();
+        }
+    }
+
+    public void game() {
         int size = weekThree.inputInt("What size game do you want to play?\n");
         Grid screen = new Grid(size);
         boolean notFortyEight = true;
