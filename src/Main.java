@@ -1,4 +1,5 @@
 import weekNine.WeekNine;
+import weekTen.WeekTen;
 import weekThree.WeekThree;
 import weekFour.WeekFour;
 import weekFive.WeekFive;
@@ -6,6 +7,7 @@ import weekSeven.WeekSeven;
 import TwentyFortyEight.TwentyFortyEight;
 import weekEight.WeekEight;
 import weekNine.WeekNine;
+import weekTen.WeekTen;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +18,7 @@ public class Main {
         TwentyFortyEight twentyFortyEight = new TwentyFortyEight();
         WeekEight weekEight = new WeekEight();
         WeekNine weekNine = new WeekNine();
+        WeekTen weekTen = new WeekTen();
         // run methods
         while (weekThree.inputString("Do you want to run this programme (y/n)").equalsIgnoreCase("y")) {
             switch (weekThree.inputInt("Which Week would you like to run? (3,4,5,7,8,9 & 2048)")) {
@@ -25,6 +28,7 @@ public class Main {
                 case 7 -> weekSeven.run();
                 case 8 -> weekEight.run();
                 case 9 -> weekNine.run();
+                case 10 -> weekTen.run();
                 case 2048 -> twentyFortyEight.run();
                 default -> System.out.println("Invalid input");
             }
