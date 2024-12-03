@@ -13,6 +13,7 @@ public class WeekFour {
                 case 2 -> exerciseTwo();
                 case 3 -> exerciseThree();
                 case 4 -> exerciseFour();
+                case 6 -> exerciseSix();
                 case 7 -> exerciseSeven();
                 case 8 -> exerciseEight();
                 case 9 -> exerciseNine();

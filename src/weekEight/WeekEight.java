@@ -4,12 +4,10 @@ import weekThree.WeekThree;
 public class WeekEight {
     WeekThree weekThree = new WeekThree();
     public void run() {
-        if (weekThree.inputString("would you like to run weekEight methods (y/n)? ").equals("y")) {
-            switch (weekThree.inputInt("Which function would you like to run? ")) {
-                case 1 -> exerciseOne();
-                case 2 -> exerciseTwo();
-                default -> System.out.println("Invalid input");
-            }
+        switch (weekThree.inputInt("Which function would you like to run? ")) {
+            case 1 -> exerciseOne();
+            case 2 -> exerciseTwo();
+            default -> System.out.println("Invalid input");
         }
     }
     protected static class ExerciseOne {
